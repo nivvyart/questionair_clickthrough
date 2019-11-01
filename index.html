@@ -130,42 +130,8 @@
 
             <p>(* indicates required)</p>
             <button class="btn btn-default btn-lg prv animated">Prev <span class="icon-next"></span></button>
-            <button class="btn btn-default btn-lg nxt animated">Next <span class="icon-next"></span></button>
-            
-            <script type="text/javascript">
-                //<![CDATA[
-                var submitcount98797 = 0;
-
-                function checkWholeForm98797(theForm) {
-                        var why = "";
-                        if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");
-                        if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name");
-                        if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
-                        if (theForm.Company) why += isEmpty(theForm.Company.value, "Company Name");
-                        if (theForm.CellPhone) why += isEmpty(theForm.CellPhone.value, "Cell Phone Number");
-                        if (theForm.CAT_Custom_389864) why += checkDropdown(theForm.CAT_Custom_389864.value, "State");
-                        if (theForm.CAT_Custom_389871) why += checkDropdown(theForm.CAT_Custom_389871.value, "Area Description");
-                        if (theForm.CAT_Custom_389866) why += checkDropdown(theForm.CAT_Custom_389866.value, "Existing Lighting Solutions?");
-                        if (theForm.CAT_Custom_389867) why += checkDropdown(theForm.CAT_Custom_389867.value, "What wattage are your existing lights?");
-                        if (theForm.CAT_Custom_389868) why += isCurrency(theForm.CAT_Custom_389868.value, "Number of lights");
-                        if (theForm.CAT_Custom_389869) why += checkDropdown(theForm.CAT_Custom_389869.value, "Emergency?");
-                        if (theForm.CAT_Custom_389870) why += isCurrency(theForm.CAT_Custom_389870.value, "Hours of operation per week?");
-                        if (why != "") {
-                            alert(why);
-                            return false;
-                        }
-                        if (submitcount98797 == 0) {
-                            submitcount98797++;
-                            theForm.submit();
-                            return false;
-                        } else {
-                            alert("Form submission is in progress.");
-                            return false;
-                        }
-                    }
-                    //]]>
-            </script>
-        </form>
+            <button class="btn btn-default btn-lg nxt animated">Next <span class="icon-next"></span></button>    
+           </form>
         
     </body>
 </html>
