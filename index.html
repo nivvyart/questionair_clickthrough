@@ -1,16 +1,32 @@
-<h1>Energy Savings Calculator</h1>
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>Energy Savings Calculator</title>
+        <meta name="robots" content="noindex" />
+    </head>
+
+    <body>
+        <div class="full-width-cont-banner">
+            <img src="https://www.enlighten.com.au/_assets/img/sliders/vico/bg.jpg" style="width: 100vw; max-height: 500px; margin: 0px auto;" alt="banner image" class="img-responsive">
+        </div>
+        
+        <h1>Energy Savings Calculator</h1>
+        <p>At enLighten we are passionate about delivering energy savings to our clients by combining the benefits of LED and controls that respond to how the space is used. We tried to make the energy savings calculation as accurate as we can but we understand that every situation is different so we might need to ask you for more information at the end of the questionnaire.</p>
         <div class=".progress-bar-container"><span class="progress-bar-eng">&nbsp;</span></div>
         <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b353.r525282-phase1"></script>
         
-        <form id="energy-calc-form" method="post" onsubmit="return checkWholeForm98797(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=440256&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}"> 
+        <form id="energy-calc-form" method="post" onsubmit="return checkWholeForm98797(this)" enctype="multipart/form-data" action="/thank-you-energy-savings"> 
             <ul class="progress-form">
                 <li class="form-group animated activate">
+                <div class="col-md-6">
                     <div class="headline"><h3 for="FirstName">First Name *</h3></div>
-                    <input type="text" name="FirstName" id="FirstName" class="cat_textbox" maxlength="255"> 
-                </li>  
-                <li class="form-group animated">
+                    <input style="width: 100%"type="text" name="FirstName" id="FirstName" class="cat_textbox" maxlength="255"> 
+                </div>
+                <div class="col-md-6">
                     <h3 for="LastName">Last Name *</h3>
-                    <input type="text" name="LastName" id="LastName" class="cat_textbox" maxlength="255"> 
+                    <input style="margin-top: 16px; width: 100%" type="text" name="LastName" id="LastName" class="cat_textbox" maxlength="255"> 
+                </div>
                 </li>  
                 <li class="form-group animated ">
                     <h3 for="EmailAddress">Email Address *</h3>
@@ -21,13 +37,13 @@
                     <input type="text" name="Company" id="Company" class="cat_textbox" maxlength="255">
                 </li>  
                 <li class="form-group animated ">
-                    <h3 for="CellPhone">Cell Phone Number *</h3>
+                    <h3 for="CellPhone">Phone Number *</h3>
                     <input type="text" name="CellPhone" id="CellPhone" class="cat_textbox" maxlength="255">
                 </li>  
                 <li class="form-group animated ">
                     <h3 for="CAT_Custom_389864">State *</h3>
                     <select name="CAT_Custom_389864" id="CAT_Custom_389864" class="cat_dropdown">
-                        <option value=" ">-- Please select --</option>
+                        <option value="">-- Please select --</option>
                         <option selected="selected" value="NSW">NSW</option>
                         <option value="QLD">QLD</option>
                         <option value="SA">SA</option>
@@ -39,20 +55,24 @@
 
                 <li class="form-group animated ">
                     <h3 for="CAT_Custom_389871"> Area Description * </h3>
-                    <select name="CAT_Custom_389871" id="CAT_Custom_389871" class="cat_dropdown">
-                        <option value=" ">-- Please select --</option>
+                    <select name="CAT_Custom_389871" id="CAT_Custom_389871" class="cat_dropdown area-desc-dropdown">
+                        <option value="">-- Please select --</option>
                         <option value="Car Park">Car Park</option>
                         <option value="Distribution Center">Distribution Center</option>
                         <option value="Loading dock">Loading dock</option>
                         <option value="Warehouse">Warehouse</option>
                         <option value="Other">Other</option>
                     </select>
+                    <div id="area-other-textarea">
+                        <h3 for="CAT_Custom_389878">Additional Area Description</h3>
+                        <textarea name="CAT_Custom_389878" id="CAT_Custom_389878" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea>
+                    </div>
                 </li>  
 
                 <li class="form-group animated ">
                     <h3 for="CAT_Custom_389866">Existing Lighting Solutions? *</h3>
-                    <select name="CAT_Custom_389866" id="CAT_Custom_389866" class="cat_dropdown">
-                        <option value=" ">-- Please select --</option>
+                    <select name="CAT_Custom_389866" id="CAT_Custom_389866" class="cat_dropdown existing-dropdown">
+                        <option value="">-- Please select --</option>
                         <option value="High Bay Mercury Vapour">High Bay Mercury Vapour</option>
                         <option value="High Bar Metal Halide">High Bar Metal Halide</option>
                         <option value="Batten Single fluorescent">Batten Single fluorescent</option>
@@ -60,11 +80,15 @@
                         <option value="Troffer">Troffer</option>
                         <option value="Other">Other</option>
                     </select>
+                    <div id="existing-other-textarea">
+                        <h3 for="CAT_Custom_389878">Existing Lighting solution details</h3>
+                        <textarea name="CAT_Custom_389879" id="CAT_Custom_389879" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea>
+                    </div>
                 </li>  
                 <li class="form-group animated ">
                     <h3 for="CAT_Custom_389867">What wattage are your existing lights? *</h3>
                     <select name="CAT_Custom_389867" id="CAT_Custom_389867" class="cat_dropdown">
-                        <option value=" ">-- Please select --</option>
+                        <option value="">-- Please select --</option>
                         <option value="28W">28W</option>
                         <option value="36W">36W</option>
                         <option value="75W">75W</option>
@@ -100,13 +124,13 @@
                 </li>
                 <li class="form-group animated ">
                     <h3>Thank you!</h3>
-                    <input class="cat_button" type="submit" value="Submit" id="catwebformbutton">
+                    <input class="cat_button" type="submit" value="Click here to find out about your energy savings" id="catwebformbutton energyFormSub">
                 </li>
             </ul>
 
             <p>(* indicates required)</p>
-            <button class="btn btn-default btn-lg prv animated" >Prev <span class="icon-next"></span></button>
-            <button class="btn btn-default btn-lg nxt animated" >Next <span class="icon-next"></span></button>
+            <button class="btn btn-default btn-lg prv animated">Prev <span class="icon-next"></span></button>
+            <button class="btn btn-default btn-lg nxt animated">Next <span class="icon-next"></span></button>
             
             <script type="text/javascript">
                 //<![CDATA[
@@ -119,7 +143,6 @@
                         if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
                         if (theForm.Company) why += isEmpty(theForm.Company.value, "Company Name");
                         if (theForm.CellPhone) why += isEmpty(theForm.CellPhone.value, "Cell Phone Number");
-                        if (theForm.FileAttachment) why += isEmpty(theForm.FileAttachment.value, "File Attachment");
                         if (theForm.CAT_Custom_389864) why += checkDropdown(theForm.CAT_Custom_389864.value, "State");
                         if (theForm.CAT_Custom_389871) why += checkDropdown(theForm.CAT_Custom_389871.value, "Area Description");
                         if (theForm.CAT_Custom_389866) why += checkDropdown(theForm.CAT_Custom_389866.value, "Existing Lighting Solutions?");
@@ -143,3 +166,6 @@
                     //]]>
             </script>
         </form>
+        
+    </body>
+</html>
